@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const port = 3333;
-
 const server = express();
 server.use(bodyParser.json());
 server.use(cors());
@@ -18,8 +17,50 @@ let smurfs = [
     id: 0,
     name: 'Brainey Smurf',
     age: 200,
-    height: '8cm'
-  }
+    height: 8
+  },
+  {
+    id: 1,
+    name: 'Baker Smurf',
+    age: 210,
+    height: 9
+  },
+  {
+    id: 2,
+    name: 'Clumsy Smurf',
+    age: 212,
+    height: 7
+  },
+  {
+    id: 3,
+    name: 'Grouchy Smurf',
+    age: 313,
+    height: 6
+  },
+  {
+    id: 4,
+    name: 'Gutsy Smurf',
+    age: 245,
+    height: 9
+  },
+  {
+    id: 5,
+    name: 'Hackus Smurf',
+    age: 205,
+    height: 10
+  },
+  {
+    id: 6,
+    name: 'Hefty Smurf',
+    age: 252,
+    height: 9
+  },
+  {
+    id: 7,
+    name: 'Papa Smurf',
+    age: 349,
+    height: 7
+  },
 ];
 server.get('/smurfs', (req, res) => {
   res.json(smurfs);
